@@ -5,12 +5,14 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import { PlusSmallIcon } from "@heroicons/react/24/outline";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 
+import { List } from "../ui/list";
+
 export function Home() {
   return (
-    <div className="w-full h-full flex flex-row justify-between">
-      <div className="flex flex-col justify-between h-full w-1/5 border-solid border-2 border-gray-200">
-        <div className="mt-5 ">
-          <div className="py-5 px-2">
+    <div className="w-full h-full flex flex-row  ">
+      <div className="flex flex-col justify-between h-full w-1/5 border-solid border-2 border-gray-200 ">
+        <div className=" ">
+          <div className="py-7 px-2">
             <SparklesIcon className="h-9 w-9 text-violet-900" />
           </div>
           <div className=" hover:bg-gray-200 active:bg-gray-300 p-2 flex items-center">
@@ -39,11 +41,9 @@ export function Home() {
           </div>
         </div>
       </div>
-      <h1 className="text-red-300 hover:text-blue-300 transition-all text-8xl font-bold">
-        Hello
-      </h1>
-      <p className="text-red-200 text-xl font-semibold">Descrição</p>
-      <p className="text-red-200 text-xl font-semibold">Descrição 2</p>
+      <div className="w-full h-full mt-7">
+        <List />
+      </div>
     </div>
   );
 }
