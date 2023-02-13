@@ -6,6 +6,7 @@ import { PlusSmallIcon } from "@heroicons/react/24/outline";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 
 import { List } from "../ui/list";
+import { Modal } from "../ui/modal";
 
 export function Home() {
   return (
@@ -43,6 +44,7 @@ export function Home() {
       </div>
       <div className="w-full h-full mt-7">
         <List />
+        <Modal />
       </div>
     </div>
   );
