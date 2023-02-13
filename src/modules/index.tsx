@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 import { Bars3Icon } from "@heroicons/react/24/outline";
@@ -6,10 +6,12 @@ import { UserPlusIcon } from "@heroicons/react/24/outline";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 
 import { List } from "../ui/list";
-import { Modal } from "../ui/modal";
+import Modal from "../ui/modal";
 import { Wizard } from "../ui/wizard";
 
 export function Home() {
+  const [showList, setShowList] = useState<Boolean>(true);
+
   return (
     <div className="w-full h-full flex flex-row  ">
       <div className="flex flex-col justify-between h-full w-1/5 border-solid border-2 border-gray-200 ">
@@ -19,13 +21,21 @@ export function Home() {
           </div>
           <div className=" hover:bg-gray-200 active:bg-gray-300 p-2 flex items-center">
             <Bars3Icon className="h-5 w-5 text-gray-500" />
-            <button className="text-black text-1xl p-1 pl-2">
+            <button
+              onClick={() => setShowList(true)}
+              className="text-black text-1xl p-1 pl-2"
+            >
               Listar Cliente
             </button>
           </div>
           <div className=" hover:bg-gray-200 active:bg-gray-300 p-2 flex items-center">
             <UserPlusIcon className="h-5 w-5 text-gray-500" />
-            <button className="text-black text-1xl pl-2"> Novo Cliente </button>
+            <button
+              onClick={() => setShowList(false)}
+              className="text-black text-1xl pl-2"
+            >
+              Novo Cliente
+            </button>
           </div>
         </div>
         <div className="flex p-2 items-center">
@@ -46,7 +56,8 @@ export function Home() {
         </div>
       </div>
       <div className="w-full h-full mt-7">
-        <Wizard />
+        {showList && <List />}
+        {!showList && <Wizard />}
       </div>
     </div>
   );

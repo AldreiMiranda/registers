@@ -1,14 +1,23 @@
 import React from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
-export const Modal = () => {
+type Props = {
+  onCancel: () => void;
+};
+
+const Modal: React.FC<Props> = ({ onCancel }) => {
   return (
     <>
       <div className="flex justify-center items-center">
-        <div className="fixed top-0 left-0 h-full w-full bg-gray-900 justify-center flex items-center opacity-80"></div>
+        <div
+          onClick={() => onCancel()}
+          className="fixed top-0 left-0 h-full w-full bg-gray-900 justify-center flex items-center opacity-80"
+        ></div>
         <div className="bg-white p-2 border-solid border-2 border-gray-400 w-6/12 h-6/12 rounded-md min-h-0 absolute">
           <div className="flex justify-end pb-7">
-            <XMarkIcon className="h-5 w-5 text-gray-500  hover:text-purple-400" />
+            <button onClick={() => onCancel()}>
+              <XMarkIcon className="h-5 w-5 text-gray-500  hover:text-purple-400" />
+            </button>
           </div>
           <div>
             <h1 className="text-4xl">Aldrei Miranda</h1>
@@ -68,3 +77,5 @@ export const Modal = () => {
     </>
   );
 };
+
+export default Modal;
