@@ -12,3 +12,6 @@ yarn build
 # build static version after standard build
 yarn export
 ```
+
+# Link
+https://aldrei-venturelabs.netlify.app/
