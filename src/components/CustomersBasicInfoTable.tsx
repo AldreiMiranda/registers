@@ -11,7 +11,7 @@ interface Props {
 const CustomerBasicInfoTable = ({classes, data, onItemClick}: Props) => {
   return (
     <div className="overflow-x-auto w-full">
-      <table className={`table ${classes}`}>
+      <table className={`table ${classes} w-full`}>
         <thead>
           <tr>
             <th></th>
