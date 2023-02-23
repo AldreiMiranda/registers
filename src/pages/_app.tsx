@@ -22,7 +22,7 @@ export default function App({ Component }: AppProps) {
       />
       <div className="drawer-content">
         <div className="flex justify-between items-center px-5 py-3 bg-gray-100">
-          <h2 className="font-bold text-2xl">registers 🎉</h2>
+          <h2 className="font-bold text-2xl">Registers 🎉</h2>
           <label className="btn btn-circle swap swap-rotate">
             <input
               type="checkbox"
