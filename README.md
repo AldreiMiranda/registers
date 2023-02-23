@@ -1,6 +1,6 @@
-`venturelabs`
+`registers`
 
-##  Comandos
+## Comandos
 
 ```bash
 # run local
@@ -14,4 +14,5 @@ yarn export
 ```
 
 # Link
-https://aldrei-venturelabs.netlify.app/
+
+https://aldrei-registers.netlify.app/
